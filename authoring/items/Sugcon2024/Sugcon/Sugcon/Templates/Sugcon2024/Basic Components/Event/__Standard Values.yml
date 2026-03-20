@@ -1,0 +1,34 @@
+﻿---
+ID: "64978767-31bf-4ea3-b3de-5ef32c654a77"
+Parent: "a4bb7fa4-095d-4353-89d0-394c54d2f518"
+Template: "a4bb7fa4-095d-4353-89d0-394c54d2f518"
+Path: /sitecore/templates/Project/Sugcon2024/Basic Components/Event/__Standard Values
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20240314T055711Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\x3rLvWVVyq
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\x3rLvWVVyq
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "acd96881-7383-416f-9e61-7593dffc1cb7"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\x3rLvWVVyq
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20240314T055718Z
+    - ID: "de965ec8-6648-4bb3-aad9-6b7f97b8e935"
+      Hint: EventName
+      Value: $name

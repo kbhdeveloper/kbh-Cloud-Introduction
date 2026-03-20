@@ -1,0 +1,31 @@
+# folders
+.git
+.gitignore
+.vs
+.config
+.sitecore
+build
+docker
+local-containers
+packages
+**/bin/
+**/obj/
+**/out/
+**/node_modules/
+**/.generated/
+**/.next*/
+**/.vscode/
+**/coverage/
+
+# files
+*Dockerfile
+docker-compose*
+**/*.md
+*.ps1
+scjssconfig.json
+**/*.yml
+**/*.module.json
+**/*.user
+**/*.suo
+**/*.scindex
+sitecore.json

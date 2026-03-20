@@ -1,0 +1,17 @@
+@import '../../abstracts/vars';
+@import '../../abstracts/mixins';
+
+.icon-link-list.list-horizontal {
+  a {
+    border: none;
+
+    svg {
+      display: inline-block;
+    }
+  }
+
+  li {
+    display: inline-block;
+    // margin-left: $middle-margin;
+  }
+}

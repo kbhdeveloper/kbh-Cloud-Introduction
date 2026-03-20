@@ -1,0 +1,22 @@
+﻿@model MvpSite.Rendering.Models.Directory.DirectoryResultViewModel
+
+<div class="col ">
+       
+    <a href="@Model.ProfileUri"  class="card m-0 h-100">
+
+        <div class="card-img-overlay">
+             <img src="@Model.Image" class="card-img-top" alt="@Model.Name" />
+            <span class=""><b>@Model.Year</b></span>
+        </div>
+        <div class="card-body">
+           <h5 class="card-title">@Model.Name</h5>
+            <div>@Model.Type</div>
+   
+             
+ 
+            <span class="card-text"><i class="fa fa-globe" aria-hidden="true"></i> @Model.Country</span>
+        </div>
+          
+    </a>
+  
+</div>

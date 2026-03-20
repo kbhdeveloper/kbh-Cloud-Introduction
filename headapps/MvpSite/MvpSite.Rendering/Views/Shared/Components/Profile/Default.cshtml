@@ -1,0 +1,59 @@
+﻿@using MvpSite.Rendering.Extensions
+@model MvpSite.Rendering.Models.Profile.ProfileViewModel
+
+@if (Model.Mvp != null)
+{
+    <section class="mvp-fp-profile bg-white">
+        <div class="container">
+            <div class="row inner">
+                <div class="profile-image">
+                    @if (Model.Mvp.ImageUri != null)
+                    {
+                        <img src="@Model.Mvp.ImageUri.AddGravatarSizing("250")" class="" alt="@Model.Mvp.Name Avatar">
+                    }
+                    else
+                    {
+                        <img src="/images/sc_power-gradient-desktop.svg" class="" alt="@Model.Mvp.Name Avatar">
+                    }
+                </div>
+                <div class="row">
+                    <h2 asp-for="TitleLabel" class="col-12"></h2>
+                    <h1 class="col-12 ">@Model.Mvp.Name</h1>
+                    <div class="row col-12 ">
+                        @if (Model.Mvp.Country != null)
+                        {
+                            <p class="col-12"><i class="fa fa-globe" aria-hidden="true"></i> @Model.Mvp.Country?.Name</p>
+                        }
+                        <p class="profile-links col-12">
+                            <partial name="Components/Profile/_ProfileLinks" model="Model.Mvp.ProfileLinks" />
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <section class="sc-power-gradient-bg">
+            <div class="container">
+            <div class="row inner no-gutters">
+                <div class="col-12 row">
+                    <partial name="Components/Profile/_Titles" model="Model.Mvp.Titles" />
+                </div>
+            </div>
+            </div>
+        </section>
+        @if (Model.Mvp.IsMentor)
+        {
+            <div class="container">
+                <partial name="Components/Profile/_Mentor" model="Model" />
+            </div>
+        }
+        @if ((Model.GetTimelineEvents()?.Any() ?? false))
+        {
+            <div class="container timeline ">
+                <div class="row inner mb-5">
+                    <h3 asp-for="TimelineLabel" class="col-12"></h3>
+                    <partial name="Components/Profile/_Timeline" model="Model.GetTimelineEvents()" />
+                </div>
+            </div>
+        }
+    </section>
+}
