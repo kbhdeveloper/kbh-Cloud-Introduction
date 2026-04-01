@@ -8,6 +8,15 @@
     "./authoring/platform/Mvp.Project.MvpSite.Platform/Mvp.Project.MvpSite.Platform.csproj"
   ],
   "renderingHosts": {
+    "kbh-sugcon-demo": {
+      "path": "./headapps/Sugcon2024",
+      "nodeVersion": "22.11.0",
+      "jssDeploymentSecret": "110F1C44A496B45478640DD36F80C18C9",
+      "enabled": true,
+      "type": "sxa",
+      "buildCommand": "build",
+      "runCommand": "next:start"
+    },
     "kbh-developer-demo": {
       "path": "./headapps/Sugcon2024",
       "nodeVersion": "22.11.0",
