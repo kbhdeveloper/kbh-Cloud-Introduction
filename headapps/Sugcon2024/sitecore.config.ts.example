@@ -32,7 +32,7 @@ export default defineConfig({
   },
   personalize: {
     scope: process.env.NEXT_PUBLIC_PERSONALIZE_SCOPE,
-    edgeTimeout: parseInt(process.env.PERSONALIZE_MIDDLEWARE_EDGE_TIMEOUT!, 10),
-    cdpTimeout: parseInt(process.env.PERSONALIZE_MIDDLEWARE_EDGE_TIMEOUT!, 10),
+    edgeTimeout: parseInt(process.env.PERSONALIZE_MIDDLEWARE_EDGE_TIMEOUT || '400', 10),
+    cdpTimeout: parseInt(process.env.PERSONALIZE_MIDDLEWARE_CDP_TIMEOUT || '400', 10),
   },
 });
