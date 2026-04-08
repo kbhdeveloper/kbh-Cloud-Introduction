@@ -11,7 +11,9 @@ export default defineConfig({
         process.env.SITECORE_EDGE_CONTEXT_ID ||
         process.env.NEXT_PUBLIC_SITECORE_EDGE_CONTEXT_ID ||
         '',
-      clientContextId: process.env.NEXT_PUBLIC_SITECORE_EDGE_CONTEXT_ID,
+      clientContextId:
+        process.env.NEXT_PUBLIC_SITECORE_EDGE_CONTEXT_ID ||
+        process.env.SITECORE_EDGE_CONTEXT_ID,
       edgeUrl: process.env.SITECORE_EDGE_URL || process.env.NEXT_PUBLIC_SITECORE_EDGE_URL,
     },
     local: {
@@ -19,9 +21,11 @@ export default defineConfig({
       apiHost: process.env.NEXT_PUBLIC_SITECORE_API_HOST || '',
     },
   },
-  defaultSite: process.env.NEXT_PUBLIC_DEFAULT_SITE_NAME,
+  defaultSite:
+    process.env.NEXT_PUBLIC_DEFAULT_SITE_NAME || process.env.SITECORE_SITE_NAME,
   defaultLanguage: process.env.NEXT_PUBLIC_DEFAULT_LANGUAGE || 'en',
-  editingSecret: process.env.SITECORE_EDITING_SECRET,
+  editingSecret:
+    process.env.SITECORE_EDITING_SECRET || process.env.JSS_EDITING_SECRET,
   redirects: {
     enabled: true,
     locales: ['en'],
